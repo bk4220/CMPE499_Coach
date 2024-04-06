@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project>
-  <executable name="dist/default/production\Coach_032324_1440.production.hex">
+  <executable name="dist/default/production\Coach.production.hex">
     <memory name="program">
       <units>bytes</units>
       <length>4096</length>
