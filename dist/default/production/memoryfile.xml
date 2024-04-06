@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project>
+  <executable name="dist/default/production\Coach_032324_1440.production.hex">
+    <memory name="program">
+      <units>bytes</units>
+      <length>4096</length>
+      <used>2326</used>
+      <free>1770</free>
+    </memory>
+    <memory name="data">
+      <units>bytes</units>
+      <length>512</length>
+      <used>73</used>
+      <free>439</free>
+    </memory>
+  </executable>
+</project>
