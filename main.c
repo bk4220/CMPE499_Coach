@@ -54,7 +54,7 @@ void main(void)
     
     while(1)
     {
-       
+        
         if(key_pressed && keys[message_length-1] != '*' && keys[message_length-1] != 'D' && keys[message_length-1] != '#' && keys[message_length-1] != 'A')
         {
             lcd_message(keys + message_length-1);
@@ -97,13 +97,22 @@ void main(void)
             
         }
 
-        if(key_pressed && keys[message_length-1] == '#')
+        if(key_pressed && keys[message_length-1] == '#' && message_length > 1)
         {
             lcd_move_cursor(1,0);
             lcd_message("Sending");
             keys[message_length - 1] = '\0';
             send_message();
             lcd_clear();
+            for(int i = 0; i < message_length; i++)
+            {
+                keys[i] = '\0';
+            }
+            key_pressed = 0;
+            message_length = 0;
+        }
+        else if(key_pressed && (keys[message_length-1] == '#' || keys[message_length-1] == '*'))
+        {
             for(int i = 0; i < message_length; i++)
             {
                 keys[i] = '\0';
@@ -216,7 +225,7 @@ void send(char data)
     LATCbits.LC7 = 0;
     delay(70);
     LATCbits.LC7 = 1;
-    delay(70);
+    delay(1);
 }
 
 void lcd_init()
