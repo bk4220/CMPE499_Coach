@@ -1409,11 +1409,11 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;main.c: 189:     packet_pre_post_amble();
 [e ( _packet_pre_post_amble ..  ]
 "191
-[; ;main.c: 191:     for(int j = 0; j < 7; j++)
+[; ;main.c: 191:     for(int j = 0; j < 3; j++)
 {
 [v _j `i ~T0 @X0 1 a ]
 [e = _j -> 0 `i ]
-[e $ < _j -> 7 `i 297  ]
+[e $ < _j -> 3 `i 297  ]
 [e $U 298  ]
 [e :U 297 ]
 "192
@@ -1453,7 +1453,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;main.c: 201:     }
 }
 [e ++ _j -> 1 `i ]
-[e $ < _j -> 7 `i 297  ]
+[e $ < _j -> 3 `i 297  ]
 [e :U 298 ]
 }
 "202
@@ -1472,11 +1472,11 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e :U _packet_pre_post_amble ]
 [f ]
 "207
-[; ;main.c: 207:     for(int i = 0; i < 3; i++)
+[; ;main.c: 207:     for(int i = 0; i < 2; i++)
 {
 [v _i `i ~T0 @X0 1 a ]
 [e = _i -> 0 `i ]
-[e $ < _i -> 3 `i 304  ]
+[e $ < _i -> 2 `i 304  ]
 [e $U 305  ]
 [e :U 304 ]
 "208
@@ -1492,7 +1492,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;main.c: 211:     }
 }
 [e ++ _i -> 1 `i ]
-[e $ < _i -> 3 `i 304  ]
+[e $ < _i -> 2 `i 304  ]
 [e :U 305 ]
 }
 "212
@@ -1555,8 +1555,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;main.c: 225:     LATCbits.LC7 = 0;
 [e = . . _LATCbits 1 7 -> -> 0 `i `uc ]
 "226
-[; ;main.c: 226:     delay(70);
-[e ( _delay (1 -> -> -> 70 `i `l `ul ]
+[; ;main.c: 226:     delay(80);
+[e ( _delay (1 -> -> -> 80 `i `l `ul ]
 "227
 [; ;main.c: 227:     LATCbits.LC7 = 1;
 [e = . . _LATCbits 1 7 -> -> 1 `i `uc ]

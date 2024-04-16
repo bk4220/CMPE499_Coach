@@ -4478,7 +4478,7 @@ void send_message()
     int send_cnt = 0;
     packet_pre_post_amble();
 
-    for(int j = 0; j < 7; j++)
+    for(int j = 0; j < 3; j++)
     {
         while(keys[i] != '\0')
         {
@@ -4494,7 +4494,7 @@ void send_message()
 
 void packet_pre_post_amble()
 {
-    for(int i = 0; i < 3; i++)
+    for(int i = 0; i < 2; i++)
     {
         send(0xA);
         send(0xA);
@@ -4513,7 +4513,7 @@ void send(char data)
 {
     LATB = (LATB & 0xF0) | data;
     LATCbits.LC7 = 0;
-    delay(70);
+    delay(80);
     LATCbits.LC7 = 1;
     delay(1);
 }
