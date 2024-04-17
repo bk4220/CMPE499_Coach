@@ -37,10 +37,10 @@ char message_length = 0;
 unsigned char key_pressed = 0;
 unsigned char keys[MAX_MESSAGE + 1];
 
-const unsigned char keypad_array[4][4] = {'1', '2', '3', 'A',
-                                          '4', '5', '6', 'B',
-                                          '7', '8', '9', 'C',
-                                          '*', '0', '#', 'D'};
+const unsigned char keypad_array[4][4] = {'D', 'C', 'B', 'A',
+                                          '#', '9', '6', '3',
+                                          '0', '8', '5', '2',
+                                          '*', '7', '4', '1'};
 
 
 void main(void) 
